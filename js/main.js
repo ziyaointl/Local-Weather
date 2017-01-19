@@ -1,3 +1,7 @@
+var isCelsius = true;
+var celsius;
+var fahrenheit;
+
 window.onload = function () {
     var ipRequest = new XMLHttpRequest();
     var weatherRequest = new XMLHttpRequest();
@@ -17,16 +21,33 @@ window.onload = function () {
     function processWeatherRequest() {
         if (weatherRequest.readyState === 4 && weatherRequest.status === 200) {
             var response = JSON.parse(weatherRequest.responseText);
+            celsius = response.current.temp_c;
+            fahrenheit = response.current.temp_f;
             console.log(weatherRequest.responseText);
             document.getElementById("icon").src = "http:" + response.current.condition.icon;
-            displayCelsius(response);
+            displayCelsius();
             document.getElementById("weather").innerHTML = response.current.condition.text;
             document.getElementById("position").innerHTML = response.location.name + ", " + response.location.country;
             document.getElementById("time").innerHTML = "Last Updated: " + response.current.last_updated;
         }
     }
-
-    function displayCelsius(response) {
-        document.getElementById("temperature").innerHTML = response.current.temp_c + "°C";
-    }
 };
+
+function displayCelsius() {
+    document.getElementById("temperature").innerHTML = celsius + "°C";
+}
+
+function displayFahrenheit() {
+    document.getElementById("temperature").innerHTML = fahrenheit + "°F";
+}
+
+function toggleTemperatureUnit() {
+    if (isCelsius) {
+        displayFahrenheit();
+        isCelsius = false;
+    }
+    else {
+        displayCelsius();
+        isCelsius = true;
+    }
+}
