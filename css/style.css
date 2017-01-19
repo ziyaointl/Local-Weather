@@ -3060,3 +3060,7 @@ input[type="button"].btn-block {
     text-align: center;
   }
 }
+.loading {
+  display: block;
+  margin: auto;
+}
