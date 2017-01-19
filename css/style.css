@@ -3046,7 +3046,7 @@ input[type="button"].btn-block {
 .main {
   margin-left: auto;
   margin-right: auto;
-  width: auto /*whatever width you want*/;
+  width: 100%;
 }
 @media (max-width: 768px) {
   #icon {
