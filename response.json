@@ -1,0 +1,36 @@
+{
+  "location": {
+    "name": "Chinan",
+    "region": "Shandong",
+    "country": "China",
+    "lat": 36.67,
+    "lon": 117.0,
+    "tz_id": "Asia/Shanghai",
+    "localtime_epoch": 1484831924,
+    "localtime": "2017-01-19 13:18"
+  },
+  "current": {
+    "last_updated_epoch": 1484831024,
+    "last_updated": "2017-01-19 13:03",
+    "temp_c": 2.3,
+    "temp_f": 36.1,
+    "is_day": 1,
+    "condition": {
+      "text": "Sunny",
+      "icon": "//cdn.apixu.com/weather/64x64/day/113.png",
+      "code": 1000
+    },
+    "wind_mph": 18.3,
+    "wind_kph": 29.5,
+    "wind_degree": 272,
+    "wind_dir": "W",
+    "pressure_mb": 1028.0,
+    "pressure_in": 30.8,
+    "precip_mm": 0.0,
+    "precip_in": 0.0,
+    "humidity": 43,
+    "cloud": 0,
+    "feelslike_c": -3.3,
+    "feelslike_f": 26.1
+  }
+}

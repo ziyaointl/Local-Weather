@@ -18,6 +18,15 @@ window.onload = function () {
         if (weatherRequest.readyState === 4 && weatherRequest.status === 200) {
             var response = JSON.parse(weatherRequest.responseText);
             console.log(weatherRequest.responseText);
+            document.getElementById("icon").src = "http:" + response.current.condition.icon;
+            displayCelsius(response);
+            document.getElementById("weather").innerHTML = response.current.condition.text;
+            document.getElementById("position").innerHTML = response.location.name + ", " + response.location.country;
+            document.getElementById("time").innerHTML = "Last Updated: " + response.current.last_updated;
         }
+    }
+
+    function displayCelsius(response) {
+        document.getElementById("temperature").innerHTML = response.current.temp_c + "°C";
     }
 };
