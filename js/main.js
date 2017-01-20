@@ -24,7 +24,7 @@ window.onload = function () {
             celsius = response.current.temp_c;
             fahrenheit = response.current.temp_f;
             console.log(weatherRequest.responseText);
-            document.getElementById("icon").src = "http:" + response.current.condition.icon;
+            document.getElementById("icon").src = "https:" + response.current.condition.icon;
             document.getElementsByClassName("left-col")[0].className += " col-sm-4 col-sm-offset-2";
             document.getElementById("celsius").innerHTML = "°C";
             document.getElementById("fahrenheit").innerHTML = "°F";
