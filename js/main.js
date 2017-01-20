@@ -12,7 +12,7 @@ window.onload = function () {
     function processIPRequest () {
         if (ipRequest.readyState === 4 && ipRequest.status === 200) {
             var response = JSON.parse(ipRequest.responseText);
-            weatherRequest.open('GET', 'http://api.apixu.com/v1/current.json?key=3b2639ee54cf45ce958140709171801&q=' + response.latitude + "," + response.longitude, true);
+            weatherRequest.open('GET', 'https://api.apixu.com/v1/current.json?key=3b2639ee54cf45ce958140709171801&q=' + response.latitude + "," + response.longitude, true);
             weatherRequest.send();
             weatherRequest.addEventListener("readystatechange", processWeatherRequest, false);
         }
