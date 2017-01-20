@@ -26,6 +26,8 @@ window.onload = function () {
             console.log(weatherRequest.responseText);
             document.getElementById("icon").src = "http:" + response.current.condition.icon;
             document.getElementsByClassName("left-col")[0].className += " col-sm-4 col-sm-offset-2";
+            document.getElementById("celsius").innerHTML = "°C";
+            document.getElementById("fahrenheit").innerHTML = "°F";
             document.getElementById("icon").className = "";
             displayCelsius();
             document.getElementById("weather").innerHTML = response.current.condition.text;
