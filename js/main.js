@@ -46,10 +46,14 @@ function displayFahrenheit() {
 function toggleTemperatureUnit() {
     if (isCelsius) {
         displayFahrenheit();
+        document.getElementById("celsius").className = "unselected";
+        document.getElementById("fahrenheit").className = "";
         isCelsius = false;
     }
     else {
         displayCelsius();
+        document.getElementById("celsius").className = "";
+        document.getElementById("fahrenheit").className = "unselected";
         isCelsius = true;
     }
 }

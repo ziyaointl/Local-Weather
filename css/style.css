@@ -3064,3 +3064,12 @@ input[type="button"].btn-block {
   display: block;
   margin: auto;
 }
+.unit-toggle {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 10000;
+}
+.unselected {
+  color: #8c8c8c;
+}
